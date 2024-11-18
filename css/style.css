@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root {
+    --White: hsl(0, 0%, 100%);
+
+    --Stone-100: hsl(30, 54%, 90%);
+    --Stone-150: hsl(30, 18%, 87%);
+    --Stone-600: hsl(30, 10%, 34%);
+    --Stone-900: hsl(24, 5%, 18%);
+
+    --Brown-800: hsl(14, 45%, 36%);
+
+    --Rose-800: hsl(332, 51%, 32%);
+    --Rose-50: hsl(330, 100%, 98%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--Stone-100);
+    color: var(--Stone-600);
+    font-family: "Outfit", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe {
+    border-radius: 10px;
+    max-width: 43.75rem;
+    background: var(--Rose-50);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.recipe-header {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.header-image {
+    border-radius: 10px;
+    height: auto;
+    width: 100%;
+}
+
+.recipe-header, .instructions {
+    border-bottom: 1px solid var(--Stone-150);
+    padding-bottom: 2rem;
+}
+
+.simple-recipe h1 {
+    color: var(--Stone-900);
+    font-family: "Young Serif", serif;
+    font-size: 2rem;
+}
+
+.preparation {
+    padding-left: 4rem;
+}
+
+.preparation h3 {
+    color: var(--Rose-800);
+}
+
+.preparation-li::marker {
+    color: var(--Rose-800);
+}
+
+.ingredients h2, .instructions h2, .nutrition h2 {
+    font-family: "Young Serif", serif;
+    font-size: 1.3rem;
+    color: var(--Brown-800);
+}
+
+.ingredients-li, .instructions-li {
+    margin-left: 15px;
+    padding-left: 15px;
+}
+
+.ingredients-li::marker {
+    color: var(--Brown-800);
+}
+
+.instructions-li::marker {
+    color: var(--Brown-800);
+    font-weight: 800;
+}
+
+h1, h2, h3 {
+    font-size: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr {
+    border-bottom: 1px solid var(--Stone-150);
+}
+
+tr:last-child {
+    border-bottom: unset;
+}
+
+td {
+    padding: .5rem;
+}
+
+tr > td:last-child {
+    color: var(--Brown-800);
+    font-weight: 800;
+}
+
+@media (max-width: 37.5rem) {
+    main {
+        min-height: 100dvh;
+    }
+}
